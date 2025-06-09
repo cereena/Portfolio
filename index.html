@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cereena</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Media/icons8-girl-48.png" type="">
+
+
+
+    <!-- Internal CSS -->
+    <style>
+        .hero-section {
+            height: 90vh;
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .shrikhand-heading {
+            font-family: 'Shrikhand', cursive;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            color: #555;
+        }
+
+        .oswald-heading {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .mea-culpa-regular {
+            font-family: "Mea Culpa", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #f7f5f6;
+        }
+
+        .mea-culpa-regular:hover {
+            color: #b81c6a;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+        /* Cursor */
+        .cursor {
+            position: relative;
+            width: 20em;
+            margin: 250px 0px 250px 30px;
+            color: rgba(223, 77, 172, 0.75);
+            border-right: 2px solid rgba(223, 77, 172, 0.75);
+            font-size: 38px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);
+        }
+
+        /* Animation */
+        .typewriter-animation {
+            animation:
+                typewriter 5s steps(50) 1s 1 normal both,
+                blinkingCursor 500ms steps(50) infinite normal;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 98%;
+            }
+        }
+
+        @keyframes blinkingCursor {
+            from {
+                border-right-color: #d93b94bf;
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        body {
+            background-color: black;
+            color: #fefbfb;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #b81c6a;
+            /* pink on hover */
+        }
+
+        .header {
+
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        #port {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .main-title {
+            font-size: 8rem;
+            font-weight: 400;
+            color: #f57fba;
+            font-style: bold;
+            /* pink */
+            line-height: 1;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .hero-section {
+            height: 100vh;
+            /* background: url('./Media/Pink.png') no-repeat center center/cover; */
+            background: hsla(333, 83%, 73%, 1);
+
+            background: linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F37FB3", endColorstr="#F7E8F2", GradientType=1);
+            padding: 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 30px 50px;
+        }
+
+        .btn-group a {
+            margin: 10px;
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        #img {
+            margin-bottom: 60px;
+        }
+
+        footer {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 mea-culpa-regular" href="index.html">Cereena Binu ✧˚</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item fs-5"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="skill.html">Skill</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <p class="cursor typewriter-animation">Hi there, I'm CEREENA — learning and building as a web developer.</p>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Media/Pink Beige and Black Creative Portfolio Animated Presentation-images-1.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Media/Pink Beige and Black Creative Portfolio Animated Presentation-images-0.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            
+            <div class="carousel-item">
+                <img src="./Media/Pink Beige and Black Creative Portfolio Animated Presentation-images-2.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Media/Pink Beige and Black Creative Portfolio Animated Presentation-images-3.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Media/Pink Beige and Black Creative Portfolio Animated Presentation-images-4.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex justify-content-center align-items-center text-center text-white">
+        <div class="container">
+            <h1 class="display-4 mb-4">Learning by Building</h1>
+            <p class="lead mb-4">As part of my learning journey, I have worked on multiple academic and personal
+                projects that demonstrate my understanding of full-stack development. Each project helped me grow
+                stronger in real-world implementation using frontend and backend technologies.</p>
+            <div class="btn-group">
+                <a href="projects.html" class="btn btn-outline-dark">View Projects</a>
+                <a href="about.html" class="btn btn-dark">About me</a>
+                <a href="contact.html" class="btn btn-outline-dark">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-light mt-5">
+        &copy; 2025 My Website. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

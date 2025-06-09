@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+     <link rel="shortcut icon" href="./Media/icons8-bow-64.png" type="image/x-icon">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Internal CSS -->
+    <style>
+        .shrikhand-heading {
+            font-family: 'Shrikhand', cursive;
+        }
+
+
+        .oswald-heading {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            /* dark gray instead of pure black */
+            color: #0c0a0a;
+            /* light text for contrast */
+        }
+
+        .navbar {
+            background-color: rgba(30, 35, 27, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #b81c6a;
+            /* pink on hover */
+        }
+
+        .about-section {
+            background-color: #090809;
+            /* very light cream background */
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+        .video-frame {
+            border-color: #374331;
+            /* dark greenish border */
+        }
+
+
+        .btn-group a {
+            margin: 20px 10px;
+            margin-left: 450px;
+        }
+
+        @media (max-width: 768px) {
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-group a {
+                margin-left: 0px;
+                width: 80%;
+            }
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #080606;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Shrikhand&display=swap');
+
+        .lavishly-yours-regular {
+            font-family: "Lavishly Yours", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+        :root {
+            --bg: #121212;
+            --clr-1: #f50b78;
+            --clr-2: #cbc334;
+            --clr-3: #51ca94;
+            --clr-4: #f2585a;
+
+            --blur: 1rem;
+            --fs: clamp(3rem, 5vw, 6rem);
+            --ls: clamp(-1.75px, -0.25vw, -3.5px);
+        }
+
+        *,
+        *::before,
+        *::after {
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: var(--fs);
+            font-weight: 800;
+            letter-spacing: var(--ls);
+            position: relative;
+            overflow: hidden;
+            background: var(--bg);
+            margin: 0;
+            color: white;
+            /* now visible */
+            z-index: 3;
+            /* text above the aurora items */
+        }
+
+
+        .aurora {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            mix-blend-mode: darken;
+            pointer-events: none;
+        }
+
+        .aurora__item {
+            overflow: hidden;
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            background-color: var(--clr-1);
+            border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+            filter: blur(var(--blur));
+            mix-blend-mode: overlay;
+        }
+
+        .aurora__item:nth-of-type(1) {
+            top: -50%;
+            animation: aurora-border 6s ease-in-out infinite,
+                aurora-1 12s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(2) {
+            background-color: var(--clr-3);
+            right: 0;
+            top: 0;
+            animation: aurora-border 6s ease-in-out infinite,
+                aurora-2 12s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(3) {
+            background-color: var(--clr-2);
+            left: 0;
+            bottom: 0;
+            animation: aurora-border 6s ease-in-out infinite,
+                aurora-3 8s ease-in-out infinite alternate;
+        }
+
+        .aurora__item:nth-of-type(4) {
+            background-color: var(--clr-4);
+            right: 0;
+            bottom: -50%;
+            animation: aurora-border 6s ease-in-out infinite,
+                aurora-4 24s ease-in-out infinite alternate;
+        }
+
+        @keyframes aurora-1 {
+            0% {
+                top: 0;
+                right: 0;
+            }
+
+            50% {
+                top: 100%;
+                right: 75%;
+            }
+
+            75% {
+                top: 100%;
+                right: 25%;
+            }
+
+            100% {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @keyframes aurora-2 {
+            0% {
+                top: -50%;
+                left: 0%;
+            }
+
+            60% {
+                top: 100%;
+                left: 75%;
+            }
+
+            85% {
+                top: 100%;
+                left: 25%;
+            }
+
+            100% {
+                top: -50%;
+                left: 0%;
+            }
+        }
+
+        @keyframes aurora-3 {
+            0% {
+                bottom: 0;
+                left: 0;
+            }
+
+            40% {
+                bottom: 100%;
+                left: 75%;
+            }
+
+            65% {
+                bottom: 40%;
+                left: 50%;
+            }
+
+            100% {
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes aurora-4 {
+            0% {
+                bottom: -50%;
+                right: 0;
+            }
+
+            50% {
+                bottom: 0%;
+                right: 40%;
+            }
+
+            90% {
+                bottom: 50%;
+                right: 25%;
+            }
+
+            100% {
+                bottom: -50%;
+                right: 0;
+            }
+        }
+
+        @keyframes aurora-border {
+            0% {
+                border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+            }
+
+            25% {
+                border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+            }
+
+            50% {
+                border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+            }
+
+            75% {
+                border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+            }
+
+            100% {
+                border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+            }
+        }
+
+        .mea-culpa-regular {
+            font-family: "Mea Culpa", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: aliceblue;
+        }
+
+        .mea-culpa-regular:hover {
+            color: #b81c6a;
+        }
+
+        .about-section {
+            background-color: #070606;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* very light cream background */
+        }
+
+        @media (max-width: 600px) {
+
+            .green-block,
+            .green-block2,
+            .green-block3,
+            .green-block4 {
+                width: 80vw;
+                height: 80vw;
+                left: -2vw;
+                top: -2vw;
+            }
+        }
+
+        .green-block {
+            position: absolute;
+            width: 41vw;
+            height: 25vw;
+            left: 0vw;
+            top: -1.5vw;
+            background-color: rgb(8, 8, 7);
+            z-index: 0;
+
+        }
+
+        .green-block4 {
+            position: absolute;
+            width: 41vw;
+            height: 25vw;
+            left: 0vw;
+            top: -1.5vw;
+            background-color: rgb(8, 8, 7);
+            z-index: 0;
+        }
+
+        .about-section2 {
+            background-color: #070606;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* very light cream background */
+        }
+
+        .about-section3 {
+            background-color: #070606;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .green-block2 {
+            position: absolute;
+            width: 41vw;
+            height: 25vw;
+            left: 0vw;
+            top: -1.5vw;
+            background-color: rgb(8, 8, 7);
+            z-index: 0;
+
+        }
+
+        .green-block3 {
+            position: absolute;
+            width: 41vw;
+            height: 25vw;
+            left: 0vw;
+            top: -1.5vw;
+            background-color: rgb(8, 8, 7);
+            z-index: 0;
+
+        }
+
+        @media (max-width: 600px) {
+
+            .video,
+            #video2,
+            #video3 {
+                width: 90%;
+                height: 300px;
+                left: 5%;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        #video2 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        #video3 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        #project1 {
+
+            /* background-image: url('./Media/yellow.jpg'); */
+            background: hsla(333, 83%, 73%, 1);
+
+            background: linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F37FB3", endColorstr="#E48484", GradientType=1);
+        }
+
+        #project2 {
+            background: hsla(333, 83%, 73%, 1);
+
+            background: linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F37FB3", endColorstr="#E48484", GradientType=1);
+            /* background-image: url('./Media/yellow.jpg'); */
+        }
+
+        #project3 {
+            /* background-image: url('./Media/yellow.jpg'); */
+            background: hsla(333, 83%, 73%, 1);
+
+            background: linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(0, 64%, 71%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F37FB3", endColorstr="#E48484", GradientType=1);
+        }
+
+        footer {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1  mea-culpa-regular" href="index.html">Cereena Binu ✧˚</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 class="title">My Projects
+            <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+            </div>
+        </h1>
+    </div>
+
+
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center shadow p-5 rounded" id="project1">
+
+                <!-- Text Column -->
+                <div class="col-md-6">
+
+                    <h2 class="fw-bold text-uppercase mb-3" style="color: #050404;">RESTAURANT WEBSITE</h2>
+                    <hr>
+
+                    <p>🔥 Heat Haus - Restaurant Website
+                        A modern and stylish restaurant website for Heat Haus.
+                        The site features an easy-to-navigate Menu, Reservations, Jobs, and Contact section. </p>
+                    <p>The goal was to create an inviting online presence for the restaurant and improve user
+                        experience.</p>
+                    <p style="color: #020201;">Click here :<a href="">https://www.myprojectdemo.com</p></a>
+                    <hr>
+                </div>
+
+                <!-- Video Column -->
+                <div class="col-md-6 mb-4 mb-md-0 position-relative">
+                    <!-- Green Block -->
+                    <div class="green-block position-absolute"></div>
+
+                    <!-- Video -->
+                    <div class="ratio ratio-16x9 position-relative" style="z-index: 1;">
+                        <video controls autoplay muted loop>
+                            <source src="./Media/Restaurant.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section3 py-5">
+        <div class="container">
+            <div class="row align-items-center shadow p-5 rounded" id="project3">
+
+                <!-- Video Column -->
+                <div class="col-md-6 mb-4 mb-md-0 position-relative">
+                    <!-- Green Block -->
+                    <div class="green-block3 position-absolute"></div>
+
+                    <!-- Video -->
+                    <div class="ratio ratio-16x9 position-relative" style="z-index: 1;">
+                        <video controls autoplay muted loop>
+                            <source src="./Media/Event-Management2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="col-md-6 position-relative">
+                    <h2 class="fw-bold text-uppercase mb-3" style="color: #050404;">EVENT MANAGEMENT WEBSITE</h2>
+                    <hr>
+                    <p style="color: #030303;">🤍 Chic Aura Events
+                        A creative event management website designed to showcase wedding and special event services.
+                    </p>
+                    <p style="color: #020201;">Includes sections like Home, Events, Love Notes, Contact, and About.
+                        It was built to provide a simple and elegant platform for clients to explore event offerings.🤍
+                    </p>
+                    <p style="color: #020201;">Click here :<a href="">https://www.myprojectdemo.com</p></a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center shadow p-5 rounded" id="project1">
+
+                <!-- Text Column -->
+                <div class="col-md-6">
+
+                    <h2 class="fw-bold text-uppercase mb-3" style="color: #050404;">STUDY ABROAD WEBSITE</h2>
+                    <hr>
+
+                    <p>🌏 EduPath Consultancy - Study Abroad Website
+                        A professional website for a study abroad consultancy.
+                        Showcases services, student testimonials, and a detailed contact section. </p>
+                    <p>Designed to build trust and provide clear information to
+                        prospective students and parents looking for overseas education guidance.</p>
+                    <p style="color: #020201;">Click here :<a href="">https://www.myprojectdemo.com</p></a>
+                    <hr>
+                </div>
+
+                <!-- Video Column -->
+                <div class="col-md-6 mb-4 mb-md-0 position-relative">
+                    <!-- Green Block -->
+                    <div class="green-block4 position-absolute"></div>
+
+                    <!-- Video -->
+                    <div class="ratio ratio-16x9 position-relative" style="z-index: 1;">
+                        <video controls autoplay muted loop>
+                            <source src="./Media/website video (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-section2 py-5">
+        <div class="container">
+            <div class="row align-items-center shadow p-5 rounded" id="project2">
+                <!-- Video Column -->
+                <div class="col-md-6 mb-4 mb-md-0 position-relative">
+                    <!-- Green Block -->
+                    <div class="green-block2 position-absolute"></div>
+
+                    <!-- Video -->
+                    <div class="ratio ratio-16x9 position-relative" style="z-index: 1;">
+                        <video controls autoplay muted loop>
+                            <source src="./Media/House of elegance.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-6 position-relative">
+                    <h2 class="fw-bold text-uppercase mb-3 pt-5" style="color: #080807;">E-COMMERCE WEBSITE</h2>
+                    <hr>
+                    <p style="color: #070706;">✨House of Elegance - E-commerce Website
+                        An e-commerce website focused on women's fashion,
+                        featuring aesthetic dresses, accessories, footwear, jewelry, and bags. </p>
+                    <p style="color: #050504;">Includes sections for product browsing and a contact page with Google
+                        Maps.
+                        Designed to offer an elegant and user-friendly shopping experience.✨</p>
+                    <p style="color: #020201;">Click here :<a href="">https://www.myprojectdemo.com</p></a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="btn-group">
+        <a href="index.html" class="btn btn-outline-light">Back to home</a>
+        <a href="about.html" class="btn btn-light">About me</a>
+        <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-light mt-5">
+        &copy; 2025 My Website. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Talk</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+
+     <link rel="shortcut icon" href="./Media/icons8-bow-64.png" type="image/x-icon">
+
+    <!-- Internal CSS -->
+    <style>
+        .oswald-heading {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .mea-culpa-regular {
+            font-family: "Mea Culpa", cursive;
+            font-weight: 600;
+            font-style: normal;
+            color: #f7f5f6;
+        }
+
+        .mea-culpa-regular:hover {
+            color: #b81c6a;
+        }
+
+
+        body {
+            background-color: black;
+            color: #fefbfb;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #b81c6a;
+            /* pink on hover */
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 10px 30px 10px rgba(240, 157, 240, 0.3);
+        }
+
+        .contact-left {
+            flex: 1;
+            padding: 50px;
+            color: #ddd6a5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-left h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .contact-left h1 span {
+            color: #fa9edf;
+        }
+
+        .contact-left {
+            color: #fdfcf9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #f7aedf;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #f0e5c3;
+        }
+
+        .contact-right {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .contact-left,
+        .contact-right {
+            flex: 1 1 400px;
+            /* flexible for responsive */
+            padding: 50px;
+        }
+
+        .btn-group {
+            display: flex;
+            padding: 50px 300px; 
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0 200px 0;
+        }
+
+        .btn-group a {
+            color: #b81c6a;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        
+        @media (max-width: 768px) {
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            .btn-group a {
+                width: 40%;
+            }
+        }
+        .content-text {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        #img {
+            margin-bottom: 60px;
+        }
+
+        footer {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 mea-culpa-regular" href="index.html">Cereena Binu ✧˚</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item fs-5"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="skill.html">Skill</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-left">
+            <h1>Let's <span>talk</span></h1>
+            <p>Drop us a message or contact us via email. We'll get back to you soon!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-right">
+            <div class="image-container">
+                <img src="./Media/contact.png" alt="Contact Image">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="btn-group">
+        <a href="index.html" class="btn btn-outline-light">Back to Home</a>
+        <a href="projects.html" class="btn btn-light">View Projects</a>
+        <a href="about.html" class="btn btn-outline-light">About me</a>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-light mt-5">
+        &copy; 2025 My Website. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+    color: #fefbfb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(83, 236, 185);
+}
+
+h2 {
+    color: rgb(83, 236, 185);
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.skill-category {
+    margin-bottom: 30px;
+}
+
+.skill-category h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background-color: #282e34;
+    color: rgb(83, 236, 185);
+    margin: 5px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-group a {
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group a {
+        margin-left: 0px;
+        width: 80%;
+    }
+}
+
+footer {
+    font-size: 14px;
+}

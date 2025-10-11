@@ -1,0 +1,167 @@
+.hero-section {
+    height: 90vh;
+    background-color: #f8f9fa;
+    padding: 50px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.shrikhand-heading {
+    font-family: 'Shrikhand', cursive;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.oswald-heading {
+    font-family: 'Oswald', sans-serif;
+}
+
+.mea-culpa-regular {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: #f7f5f6;
+}
+
+.mea-culpa-regular:hover {
+    color: #b81c6a;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor {
+    position: relative;
+    width: 20em;
+    margin: 250px 0px 250px 30px;
+    color: rgba(223, 77, 172, 0.75);
+    border-right: 2px solid rgba(223, 77, 172, 0.75);
+    font-size: 38px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.typewriter-animation {
+    animation:
+        typewriter 5s steps(50) 1s 1 normal both,
+        blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 98%;
+    }
+}
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: #d93b94bf;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+body {
+    background-color: black;
+    color: #fefbfb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #b81c6a;
+    /* pink on hover */
+}
+
+.header {
+
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 14px;
+}
+
+#port {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.main-title {
+    font-size: 8rem;
+    font-weight: 400;
+    color: #f57fba;
+    font-style: bold;
+    /* pink */
+    line-height: 1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.hero-section {
+    height: 100vh;
+    /* background: url('./Media/Pink.png') no-repeat center center/cover; */
+    background: hsla(333, 83%, 73%, 1);
+
+    background: linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(333, 83%, 73%, 1) 0%, hsla(320, 48%, 94%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#F37FB3", endColorstr="#F7E8F2", GradientType=1);
+    padding: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.btn-group a {
+    margin: 10px;
+}
+
+.content-text {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+#img {
+    margin-bottom: 60px;
+}
+
+footer {
+    font-size: 14px;
+}

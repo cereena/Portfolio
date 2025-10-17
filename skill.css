@@ -41,6 +41,17 @@ h2 {
     margin-bottom: 15px;
 }
 
+.mea-culpa-regular {
+     font-family: "Mea Culpa", cursive;
+     font-weight: 600;
+     font-style: normal;
+     color: aliceblue;
+ }
+
+ .mea-culpa-regular:hover {
+     color: #b81c6a;
+ }
+ 
 .badge {
     background-color: #282e34;
     color: rgb(83, 236, 185);

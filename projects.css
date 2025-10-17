@@ -8,33 +8,34 @@
  }
 
  body {
-     background-color: #121212;
+     background-color: #000000;
      /* dark gray instead of pure black */
      color: #0c0a0a;
-     /* light text for contrast */
+    font-family: "Poppins", sans-serif;
+
  }
 
- .navbar {
-     background-color: rgba(30, 35, 27, 0.8);
-     backdrop-filter: blur(10px);
- }
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
 
- .navbar-brand {
-     font-weight: 600;
-     font-size: 1.8rem;
-     letter-spacing: 1px;
- }
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
 
- .nav-link {
-     font-weight: 500;
-     margin-right: 15px;
-     transition: color 0.3s ease;
- }
+.nav-link {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
 
- .nav-link:hover {
-     color: #b81c6a;
-     /* pink on hover */
- }
+.nav-link:hover {
+  color: #b81c6a;
+}
 
  .about-section {
      background-color: #090809;
@@ -86,11 +87,11 @@
  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
  :root {
-     --bg: #121212;
-     --clr-1: #f50b78;
-     --clr-2: #cbc334;
-     --clr-3: #51ca94;
-     --clr-4: #f2585a;
+     --bg: #000000;
+     --clr-1: #c300ff;
+     --clr-2: #ff0077;
+     --clr-3: #ff0000;
+     --clr-4: #fe62dd;
 
      --blur: 1rem;
      --fs: clamp(3rem, 5vw, 6rem);
@@ -116,7 +117,7 @@
      overflow: hidden;
      background: var(--bg);
      margin: 0;
-     color: white;
+     color: rgb(247, 177, 233);
      /* now visible */
      z-index: 3;
      /* text above the aurora items */
